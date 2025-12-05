@@ -1,4 +1,4 @@
-
+/* Reset стилів */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,6 @@
 
 html, body {
     height: 100%;
-    font-family: inherit;
 }
 
 img, picture, video, canvas, svg {
@@ -26,4 +25,10 @@ ul, ol {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
 }
