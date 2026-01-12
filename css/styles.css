@@ -1,4 +1,3 @@
-/* Глобальні стилі */
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -6,6 +5,17 @@ body {
     background-color: #ffffff;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+/* Скидання */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Контейнер */
@@ -18,12 +28,10 @@ body {
 /* Header */
 header {
     border-bottom: 1px solid #e7e9fc;
-    padding: 24px 0;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -35,11 +43,12 @@ header {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #2E2F42;
+    color: #2e2f42;
+    margin-right: 76px;
 }
 
 .logo-web {
-    color: #4D5AE5;
+    color: #4d5ae5;
 }
 
 /* Навігація */
@@ -50,9 +59,9 @@ header {
 
 .header-nav a {
     font-weight: 500;
-    color: #2E2F42;
+    color: #2e2f42;
     padding: 24px 0;
-    position: relative;
+    display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -62,28 +71,29 @@ header {
 }
 
 /* Адреса */
-.header-adress {
+.header-address {
+    margin-left: auto;
     font-style: normal;
 }
 
-.header-adress ul {
+.header-address ul {
     display: flex;
     gap: 40px;
 }
 
-.header-adress a {
+.header-address a {
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-adress a:hover,
-.header-adress a:focus {
+.header-address a:hover,
+.header-address a:focus {
     color: #404bbf;
 }
 
-/* Герой секція */
+/* Hero */
 .hero {
-    background-color: #2E2F42;
+    background-color: #2e2f42;
     padding: 188px 0;
     text-align: center;
 }
@@ -91,21 +101,22 @@ header {
 .hero-logo {
     font-size: 56px;
     line-height: 1.07;
-    color: #FFFFFF;
+    color: #ffffff;
     max-width: 496px;
     margin: 0 auto 48px;
 }
 
 .hero-button {
-    background-color: #4D5AE5;
-    color: #FFFFFF;
+    background-color: #4d5ae5;
+    color: #ffffff;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
     letter-spacing: 0.04em;
     padding: 16px 32px;
     border-radius: 4px;
     min-width: 169px;
+    cursor: pointer;
+    border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -114,7 +125,7 @@ header {
     background-color: #404bbf;
 }
 
-/* Секція Features */
+/* Features */
 .features {
     padding: 120px 0;
 }
@@ -124,12 +135,8 @@ header {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
     overflow: hidden;
+    clip-path: inset(100%);
 }
 
 .features-info {
@@ -138,33 +145,25 @@ header {
 }
 
 .features-info-list {
-    flex-basis: calc((100% - 72px) / 4);
+    width: calc((100% - 72px) / 4);
 }
 
 .features-h {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
-    color: #2E2F42;
+    color: #2e2f42;
     margin-bottom: 8px;
 }
 
-.features-txt {
-    color: #434455;
-}
-
-/* Секція Team */
+/* Team */
 .team {
-    background-color: #F4F4FD;
+    background-color: #f4f4fd;
     padding: 120px 0;
 }
 
 .team-logo {
     font-size: 36px;
-    line-height: 1.11;
-    color: #2E2F42;
     text-align: center;
-    text-transform: capitalize;
     margin-bottom: 72px;
 }
 
@@ -174,45 +173,39 @@ header {
 }
 
 .team-card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
+    width: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
-                0 1px 1px 0 rgba(46, 47, 66, 0.16), 
-                0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px rgba(46,47,66,0.08),
+                0 1px 1px rgba(46,47,66,0.16),
+                0 1px 6px rgba(46,47,66,0.08);
     text-align: center;
-    flex-basis: calc((100% - 72px) / 4);
 }
 
 .team-card img {
-    width: 100%;
-    height: auto;
+    width: 264px;
+    display: block;
 }
 
 .team-name {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
-    color: #2E2F42;
-    padding-top: 32px;
+    margin-top: 32px;
     margin-bottom: 8px;
 }
 
 .team-job {
-    color: #434455;
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
-/* Секція Portfolio */
+/* Portfolio */
 .portfolio {
     padding: 120px 0;
 }
 
 .portfolio-logo {
     font-size: 36px;
-    line-height: 1.11;
-    color: #2E2F42;
     text-align: center;
-    text-transform: capitalize;
     margin-bottom: 72px;
 }
 
@@ -223,39 +216,23 @@ header {
 }
 
 .portfolio-card {
-    flex-basis: calc((100% - 48px) / 3);
-    border-bottom: 1px solid #e7e9fc;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-card:hover {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
-                0 1px 1px 0 rgba(46, 47, 66, 0.16), 
-                0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
-
-.portfolio-card img {
-    width: 100%;
-    height: auto;
+    width: calc((100% - 48px) / 3);
 }
 
 .portfolio-name {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
-    color: #2E2F42;
-    padding: 32px 0 8px 16px;
+    margin: 32px 0 8px 16px;
 }
 
 .portfolio-job {
-    color: #434455;
-    padding-bottom: 32px;
-    padding-left: 16px;
+    margin-left: 16px;
+    margin-bottom: 32px;
 }
 
 /* Footer */
 .footer {
-    background-color: #2E2F42;
+    background-color: #2e2f42;
     padding: 100px 0;
 }
 
@@ -263,19 +240,16 @@ header {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
     color: #f4f4fd;
     display: inline-block;
     margin-bottom: 16px;
 }
 
 .footer-logo-web {
-    color: #4D5AE5;
+    color: #4d5ae5;
 }
 
 .footer-text {
-    color: #F4F4FD;
     max-width: 264px;
+    color: #f4f4fd;
 }
