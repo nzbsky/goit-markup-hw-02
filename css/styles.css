@@ -67,6 +67,7 @@ a {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+    text-align: center;
 }
 
 .hero-button {
@@ -141,10 +142,12 @@ a {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
+    text-align: center;
 }
 
 .team-job {
     color: #434455;
+    text-align: center;
 }
 
 /* === PORTFOLIO === */
